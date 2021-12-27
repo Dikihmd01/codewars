@@ -1,7 +1,7 @@
-def comp(a, b):
+def comp(array1, array2):
     res = []
-    for i in range(len(a)):
-        res.append(a[i]**2)
-    res.sort()
-    b.sort()
-    return True if res == b else 0
+    if array1 is None or array2 is None: return False
+
+    for i in range(len(array1)):
+        res.append(array1[i]**2)
+    return sorted(res) == sorted(array2)
